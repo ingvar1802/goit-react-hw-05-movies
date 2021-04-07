@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import AppBar from './components/AppBar/AppBar';
 import Container from './components/Container/Container';
 import Loader from './components/Loader/Loader';
+import Footer from './components/Footer/Footer';
 
 const HomeView = lazy(() => import('./views/HomeView/HomeView' /*webpackChunkName: "HomeView"*/));
 const MoviesView = lazy(() => import('./views/MoviesView' /* webpackChunkName: "MoviesView" */));
@@ -29,6 +30,7 @@ export default function App() {
                     </Route>
                 </Switch>
             </Suspense>
+            <Footer />
         </Container>
     );
 }
